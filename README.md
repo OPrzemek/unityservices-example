@@ -5,7 +5,7 @@ Unfortunately I couldn't make it to work with second player, while using Relay S
 For Hosting
 [![Unity cloud]](ReadmeImages/unitycloud.png)
 For Matchmaker
-[![Unity cloud]](ReadmeImages/unitycloud-2.png)
+[![Unity cloud 2]](ReadmeImages/unitycloud-2.png)
 However, this is where the project stands at.
 I want to show you with some images of the project:
 
