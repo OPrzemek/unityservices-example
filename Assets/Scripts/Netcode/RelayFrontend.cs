@@ -260,14 +260,14 @@ namespace Samples.HelloNetcode
             client.EntityManager.SetName(networkStreamEntity, "NetworkStreamRequestConnect");
             // For IPC this will not work and give an error in the transport layer. For this sample we force the client to connect through the relay service.
             // For a locally hosted server, the client would need to connect to NetworkEndpoint.AnyIpv4, and the relayClientData.Endpoint in all other cases.
-            client.EntityManager.SetComponentData(networkStreamEntity, new NetworkStreamRequestConnect { Endpoint = NetworkEndpoint.Parse(serverAddress, serverPort) });
+            client.EntityManager.SetComponentData(networkStreamEntity, new NetworkStreamRequestConnect { Endpoint = relayClientData.Endpoint });
             m_AddressInput.text = joinCode;
             return joinCode;
         }
 
         public void GetJoinCode()
         {
-            // ZnajdŸ œwiat serwera
+            // Znajdï¿½ ï¿½wiat serwera
             World serverWorld = null;
             foreach (var world in World.All)
             {
@@ -283,7 +283,7 @@ namespace Samples.HelloNetcode
                 Debug.LogError("Server world not found!");
             }
 
-            // Utwórz zapytanie o encjê z komponentem JoinCode
+            // Utwï¿½rz zapytanie o encjï¿½ z komponentem JoinCode
             EntityQuery joinCodeQuery = serverWorld.EntityManager.CreateEntityQuery(typeof(JoinCode));
 
             if (joinCodeQuery.IsEmpty)
@@ -294,7 +294,7 @@ namespace Samples.HelloNetcode
             // Pobierz komponent JoinCode
             JoinCode joinCode = joinCodeQuery.GetSingleton<JoinCode>();
 
-            // Zwróæ wartoœæ kodu do³¹czenia
+            // Zwrï¿½ï¿½ wartoï¿½ï¿½ kodu doï¿½ï¿½czenia
             Debug.Log(joinCode.Value.ToString());
         }
 
@@ -321,7 +321,7 @@ namespace Samples.HelloNetcode
             client.EntityManager.SetName(networkStreamEntity, "NetworkStreamRequestConnect");
             // For IPC this will not work and give an error in the transport layer. For this sample we force the client to connect through the relay service.
             // For a locally hosted server, the client would need to connect to NetworkEndpoint.AnyIpv4, and the relayClientData.Endpoint in all other cases.
-            client.EntityManager.SetComponentData(networkStreamEntity, new NetworkStreamRequestConnect { Endpoint = NetworkEndpoint.Parse(serverAddress, serverPort) });
+            client.EntityManager.SetComponentData(networkStreamEntity, new NetworkStreamRequestConnect { Endpoint = relayClientData.Endpoint });
         }
 
         protected void DestroyLocalSimulationWorld()
