@@ -16,7 +16,7 @@ I want to show you with some images of the project:
 ![Lobby list](ReadmeImages/lobbylist.png)
 
 ## Lobby creation
-![Lobby creation](ReadmeImages/lobbylist.png)
+![Lobby creation](ReadmeImages/lobbycreation.png)
 
 ## In Lobby 
 ![In Lobby](ReadmeImages/lobby.png)
